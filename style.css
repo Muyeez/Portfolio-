@@ -1,0 +1,518 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    list-style: none;
+}
+
+
+
+/* Header styling */
+.header{
+    position: fixed;
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-50%); /* reposition an element horizontally*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+    background-color: rgba(0, 0, 0, 0.784);
+    backdrop-filter: blur(10px);
+    color: aliceblue;
+    padding: 0.5rem 1.5rem;
+    border-radius: 3rem;
+    z-index: 1000; /* to keep the header always ON even when scrolling*/
+
+}
+
+.logo{
+    color: wheat;
+    font-size: 1.3rem;
+    font-weight: 500;
+    text-wrap: nowrap;
+    transition: 0.3s ease-in-out;
+}
+
+.logo:hover{
+    transform: scale(1.2);
+}
+
+.nav-links{
+    display: flex;
+    gap: 2rem;
+}
+
+li a{
+    position: relative;
+    color: rgb(222, 222, 223);
+    font-weight: 300;
+}
+
+li a::before{
+    position: absolute;
+    content: '';
+    width: 0;
+    left: 0;
+    height: 3px;
+    top: 20px;
+    border-radius: 0.5rem;
+    transition: 0.3s ease-in-out;
+    background:linear-gradient(to right, wheat
+    , rgb(247, 217, 217))
+
+}
+
+li a:hover::before{
+    width: 100%;
+    
+}
+
+.visit-btn{
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 3rem;
+    text-wrap: nowrap;
+    font-weight: 400;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    background: linear-gradient( 45deg ,wheat , rgb(178, 255, 12) 90%);
+
+
+}
+
+.visit-btn:hover{
+    transform: scale(1.2);
+}
+#menu-icon{
+    font-size: 1.5rem;
+    display: none;
+}
+
+/* about sections style */
+
+section{
+    min-height: 100vh;
+    padding: 8rem 12%;
+    width: 100%;
+    position: relative;
+}
+.about{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about .about-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8rem;
+}
+
+.about img {
+width: 30vw;
+border-radius: 50%;
+}
+
+.info-box{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.info-box h3{
+    font-size: 1.5rem;
+    font-weight: 500;
+    opacity: 0.8;
+}
+
+.info-box h1{
+    font-size: 2.5rem;
+    font-weight: 600;
+    text-wrap: nowrap;
+}
+
+.info-box span{
+    background: linear-gradient(rgba(22, 98, 229, 0.926) , rgb(220, 23, 56));
+    background-clip: text;
+    text-wrap: nowrap;
+    color: transparent;
+    font-size: 1.8rem;
+}
+
+.btn-grp{
+display: flex;
+gap: 2rem;
+}
+
+.btn{
+    border-radius: 3rem;
+    padding: 0.5rem 1.5rem;
+    border: 2px solid black;
+    cursor: pointer;
+    font-weight: 400;
+    text-wrap: nowrap;
+    transition: 0.3s ease;
+}
+
+
+
+.btn:hover{
+    background-color: black;
+    color: beige;
+}
+
+.socials{
+    display: flex;
+    gap: 2rem;
+}
+
+.socials i{
+    font-size: 2rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+    
+}
+
+.socials i:hover{
+    transform: scale(1.5);
+}
+
+/* experience section design */
+
+.experience-title, .section-title{
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 3rem;
+}
+
+.experience-info{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+}
+.experience-info img{
+    width: 24vw;
+    border-radius: 3rem;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 2rem;
+}
+
+.grid-cards{
+    border: 2px solid black;
+    border-radius: 3rem;
+    padding: 1.5rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    align-items: baseline;
+    justify-content: left;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.grid-cards:hover{
+    transform: scale(1.02);
+    background-color: rgba(18, 17, 17, 0.733);
+    color: antiquewhite;
+}
+.grid-cards:hover span{
+    /* transform: scale(1.02);
+    background-color: rgba(18, 17, 17, 0.733); */
+    background: linear-gradient(rgb(252, 240, 20) ,rgb(22, 247, 254));
+    background-clip: text;
+    color: transparent;
+}
+
+.grid-cards i{
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.grid-cards span{
+    font-size: 1.5rem;
+    font-weight: 500;
+    background: linear-gradient(rgba(22, 98, 229, 0.926) , rgb(220, 23, 56));
+    background-clip: text;
+    color: transparent;
+}
+
+/* if u want u can change the scrollbar appearence also */
+
+/* project area styling */
+.projects-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap: 2rem;
+}
+.project-card{
+    padding: 3rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 1rem;
+    border: 2px solid black;
+    border-radius: 3rem;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+}
+
+.project-card:hover{
+    background-color: black;
+    color: white;
+    transform: translateY(-20px)scaleX(1.05);
+}
+
+
+
+.project-card img{
+    width: 20vw;
+    border-radius: 1rem;
+    
+}
+
+.project-card:hover .btn{
+    border: 2px solid white;
+    background-color: black;
+    color: white;
+}
+
+.project-card:hover .btn:hover{
+    border:  2px solid white;
+    background-color: white;
+    color: black;
+}
+
+.project-card h3{
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+/* contact and footer section */
+.input-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 5rem;
+}
+
+.input-box input{
+    border-radius: 3rem;
+    border: 2px solid black;
+    width: 28rem;
+    padding: 1rem 4rem;
+    font-size: 1.2rem;
+}
+
+.input-box input::placeholder, .input-box textarea::placeholder{
+    font-size: 1.2rem;
+}
+
+.input-box textarea{
+    border: 2px solid black;
+    font-size: 1.2rem;
+    padding: 1rem;
+}
+
+.input{
+    position: relative;
+    
+}
+
+.input i{
+    position: absolute;
+    font-size: 2rem;
+    top: 50%;
+    left: 10px;
+    transform: translate(50%, -50%);
+}
+
+/* footer design */
+footer{
+    /* height: 50vh; */
+    bottom: 1;
+    left: 0;
+    height: 1rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+footer ul{
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+} 
+
+footer ul li a{
+    color: black;
+    font-weight: 500;
+}
+
+.copyright{
+    
+    color: rgba(45, 45, 45, 0.712);
+}
+
+
+/* responsive design */
+
+@media(max-width:1280px)
+{
+    .header{
+        padding: 1rem 2rem;
+        gap: 2rem;
+
+    }
+
+    .about .about-container{
+        gap: 3rem;
+    }
+
+    .experience-info{
+        flex-direction: column;
+    }
+
+    .input-box input{
+        padding: 1rem 2.95rem;
+        font-size: 1.5rem;
+        width: 20rem;
+       
+    }
+    .input-box textarea{
+        padding: 1rem;
+        font-size: 1.5rem;
+    }
+
+    .input-box input::placeholder, .input-box textarea::placeholder{
+        font-size: 1rem;
+        padding-left: 1rem;
+        text-align: center;
+        
+    }
+
+    .input i{
+        font-size: 1.5rem;
+    }
+}
+
+@media(max-width:768px)
+{
+    .header{
+        padding: 1rem 1rem;
+        gap: 1rem;
+
+    }
+
+    .header .logo{
+        font-size: 0.9rem;
+
+    }
+    .about-container{
+        flex-direction: column;
+    }
+    
+    .header .visit-btn{
+        display: none;
+    }
+
+    .input-box input{
+        padding: 1rem 1.5rem  ;
+        font-size: 1.3rem ;
+    }
+    .input-box textarea{
+        font-size: 1.3rem ;
+        width: 25rem;
+    }
+
+    .input-box i{
+        display: none;
+    }
+
+    .grid{
+        grid-template-columns: repeat(1,1fr);
+    }
+
+    .experience-info img{
+        width: 70vw;
+    }
+
+}
+
+@media(max-width:600px)
+{
+    header #menu-icon{
+        display: block;
+    }
+
+    .nav-links{
+        position: absolute;
+        top: 100%;
+        margin-top: 1rem;
+        width: 100%;
+        padding: 1rem;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.9);
+        border-radius: 2rem;
+        display: none;
+    }
+
+    .nav-links li{
+        margin-top: 1rem;   
+        padding: 1rem;
+    }
+
+    .nav-links.active{
+        display: block;
+    }
+
+    .header{
+        padding: 1rem 4rem;
+        gap:6rem;
+    }
+    .header .logo{
+        font-size: 1.5rem;
+    }
+
+    .about-container img{
+        width: 70vw;
+    }
+
+    .info-box input{
+        padding: 0.5rem 2rem;
+        width: 70%;
+        font-size: 1.2rem;
+    }
+
+    footer ul{
+        gap: 1rem;
+    }
+
+
+}
